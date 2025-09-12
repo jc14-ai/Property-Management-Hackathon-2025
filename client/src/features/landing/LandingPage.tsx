@@ -1,4 +1,4 @@
-// import { Link } from "react-router";
+import { Link } from "react-router";
 
 import buildingImage from '../../assets/icons/building.png'
 import tenantImage from '../../assets/icons/tenant.png'
@@ -20,9 +20,10 @@ export default function LandingPage(){
           <li className='text-gray-500 mb-3'>Submit maintenance requests</li>
           <li className='text-gray-500 mb-3'>Access building amenities</li>
         </ul>
-        <div className='flex flex-row justify-center items-center w-[85%] h-[15%] bg-blue-400 rounded-[8px] text-white hover:bg-blue-300 duration-200'>
+        <Link className='flex flex-row justify-center items-center w-[85%] h-[15%] bg-blue-400 rounded-[8px] text-white hover:bg-blue-300 duration-200'
+              to='/signin/tenant'>
           Continue as Tenant
-        </div>
+        </Link>
       </div>
       <div className='flex flex-col justify-center items-center rounded-xl hover:shadow-xl hover:cursor-pointer duration-200 bg-white h-[90%] w-[40%]'>
         <img className='w-15 mb-4' src={adminImage}/>
@@ -33,9 +34,10 @@ export default function LandingPage(){
           <li className='text-gray-500 mb-3'>Access control systems</li>
           <li className='text-gray-500 mb-3'>Building administration</li>
         </ul>
-        <div className='flex flex-row justify-center items-center w-[85%] h-[15%] bg-gray-800 rounded-[8px] text-white hover:bg-gray-700 duration-200'>
+        <Link className='flex flex-row justify-center items-center w-[85%] h-[15%] bg-gray-800 rounded-[8px] text-white hover:bg-gray-700 duration-200'
+              to='/signin/concierge'>
           Continue as Concierge
-        </div>
+        </Link>
       </div>
     </div>
     </div>
