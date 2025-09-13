@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom';
 
-import LandingPage from './features/landing/LandingPage.tsx'
-import TenantSignIn from './features/auth/pages/TenantSignIn.tsx'
-import ConciergeSignIn from './features/auth/pages/ConciergeSignIn.tsx'
+import LandingPage from './features/landing/LandingPage.tsx';
+import TenantSignIn from './features/auth/pages/TenantSignIn.tsx';
+import ConciergeSignIn from './features/auth/pages/ConciergeSignIn.tsx';
 
 export default function App() {
   return <>
@@ -12,6 +12,8 @@ export default function App() {
       <Route path='/' element={<LandingPage/>}/>
       <Route path='/signin/tenant' element={<TenantSignIn/>}/>
       <Route path='/signin/concierge' element={<ConciergeSignIn/>}/>
+      <Route path='/account/tenant'/>
+      <Route path='/account/concierge'/>
     </Routes>
   </>
 }
