@@ -8,10 +8,10 @@ import ConciergeSignIn from './features/auth/pages/ConciergeSignIn.tsx'
 
 export default function App() {
   return <>
-  <LandingPage/>
-  <Routes>
-    <Route path='/signin/tenant' element={<TenantSignIn/>}/>
-    <Route path='/signin/concierge' element={<ConciergeSignIn/>}/>
-  </Routes>
+    <LandingPage/>
+    <Routes>
+      <Route path='/signin/tenant' element={<TenantSignIn/>}/>
+      <Route path='/signin/concierge' element={<ConciergeSignIn/>}/>
+    </Routes>
   </>
 }

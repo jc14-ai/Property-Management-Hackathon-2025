@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 import buildingImage from '../../assets/icons/building.png'
 import tenantImage from '../../assets/icons/tenant.png'
@@ -34,10 +34,10 @@ export default function LandingPage(){
           <li className='text-gray-500 mb-3'>Access control systems</li>
           <li className='text-gray-500 mb-3'>Building administration</li>
         </ul>
-        <Link className='flex flex-row justify-center items-center w-[85%] h-[15%] bg-gray-800 rounded-[8px] text-white hover:bg-gray-700 duration-200'
-              to='/signin/concierge'>
-          Continue as Concierge
-        </Link>
+          <Link className='flex flex-row justify-center items-center w-[85%] h-[15%] bg-gray-800 rounded-[8px] text-white hover:bg-gray-700 duration-200'
+                to='/signin/concierge'>
+            Continue as Concierge
+          </Link>
       </div>
     </div>
     </div>
