@@ -10,7 +10,6 @@ import Bulletin from "./pages/tenant/Bulletin";
 export default function Tenant(){
     const [tab, setTabName] = useState<string>("");
 
-
     return <div className="flex flex-row justify-start items-start w-screen h-screen">
         <NavBar tenantName="Jestaly Joseph Castillo" setTabName={setTabName}/>
         <div className="h-screen w-[80%]">
