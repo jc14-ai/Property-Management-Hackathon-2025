@@ -8,7 +8,7 @@ export default function LandingPage(){
     return <>
     <div className="flex flex-col justify-center items-center h-screen w-screen bg-gray-100">
         <img className='w-20 mb-2' src={buildingImage}/>
-    <h1 className='text-4xl font-bold mb-4'>Inventi Portal</h1>
+    <h1 className='text-4xl font-bold mb-4'>Propertia Portal</h1>
     <h3 className='text-gray-500 text-xl font-medium mb-8'>Welcome to your Inventi's digital hub. Choose your access type to continue.</h3>
     <div className="flex flex-row justify-evenly items-center h-[450px] w-[850px]">
       <div className='flex flex-col justify-center items-center rounded-xl hover:shadow-xl hover:cursor-pointer duration-200 bg-white h-[90%] w-[40%]'>

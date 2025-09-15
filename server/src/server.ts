@@ -1,21 +1,38 @@
 import express, { Request, Response } from 'express';
 import { pool } from './db';
 import { RowDataPacket } from 'mysql2/promise';
+import cors from 'cors';
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
-app.use(express.json());
+app.use(cors());
 
-app.get("/users", async (req: Request, res: Response) => {
+app.post("/concierge-login", async (req: Request, res: Response) => {
+  const { id, password } = req.body;
+
+  if (!id || !password) {
+    return res.status(400).json({ message: "ID and password are required" });
+  }
+
   try {
-    const [rows] = await pool.execute<RowDataPacket[]>('SELECT * FROM users;');
-    res.json(rows);
+    const [rows] = await pool.execute<RowDataPacket[]>(
+      "SELECT id, password FROM users WHERE id = ? AND password = ?",
+      [id, password]
+    );
+
+    if ((rows as any).length === 0) {
+      return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    res.json({ id: id });
   } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error(error);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 });
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
