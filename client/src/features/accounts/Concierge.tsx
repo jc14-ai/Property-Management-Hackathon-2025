@@ -8,12 +8,14 @@ import UtilityBoard from "./pages/concierge/UtilityBoard.tsx";
 import Bulletin from "./pages/concierge/Bulletin.tsx";
 import Maintenance from "./pages/concierge/Maintenance.tsx";
 import UtilityUsage from "./pages/concierge/UtilityUsage.tsx";
+import { useParams } from "react-router-dom";
 
 export default function Concierge(){
+    const { id } = useParams<{id:string}>();
     const [tab, setTabName] = useState<string>("");
     
     return <div className="flex flex-row justify-start w-screen h-screen bg-gray-200">
-        <NavBar conciergeId="014" setTabName={setTabName}/>
+        <NavBar conciergeId={id ?? "0"} setTabName={setTabName}/>
         <div className="h-screen w-[80%]">
             {/* home
                 tenants

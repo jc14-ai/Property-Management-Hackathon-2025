@@ -8,6 +8,8 @@ const PORT = 5000;
 
 app.use(cors());
 
+app.use(express.json())
+
 app.post("/concierge-login", async (req: Request, res: Response) => {
   const { id, password } = req.body;
 

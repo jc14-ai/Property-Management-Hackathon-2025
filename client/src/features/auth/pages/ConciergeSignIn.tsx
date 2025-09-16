@@ -17,8 +17,6 @@ export default function ConciergeSignIn() {
     // const passwordRef = useRef<HTMLInputElement>(null);
     const [credentials, setCredentials] = useState<Credentials>({id:"", password:""});
 
-   
-
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // TODO: Call API here to verify credentials
@@ -28,7 +26,7 @@ export default function ConciergeSignIn() {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ id: credentials.id, password: credentials.password })
+        body: JSON.stringify(credentials)
         });
 
         if (!response.ok) {
