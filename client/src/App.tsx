@@ -14,7 +14,7 @@ export default function App() {
       <Route path='/' element={<LandingPage/>}/>
       <Route path='/signin/tenant' element={<TenantSignIn/>}/>
       <Route path='/signin/concierge' element={<ConciergeSignIn/>}/>
-      <Route path='/account/tenant' element={<Tenant/>}/>
+      <Route path='/account/tenant/:id' element={<Tenant/>}/>
       <Route path='/account/concierge/:id' element={<Concierge/>}/>
     </Routes>
   </>
