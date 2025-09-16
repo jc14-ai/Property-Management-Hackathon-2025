@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 
 
 export default function Tenant(){
-    const { id } = useParams<{id:string}>();
+    const { id, unit } = useParams<{id:string, unit:string}>();
     const [tab, setTabName] = useState<string>("");
 
     return <div className="flex flex-row justify-start items-start w-screen h-screen">

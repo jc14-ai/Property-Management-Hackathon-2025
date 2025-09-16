@@ -6,7 +6,7 @@ import bulletinImage from '../../../../assets/icons/bulletin_white.png';
 import maintenanceImage from '../../../../assets/icons/maintenance_white.png';
 import meterImage from '../../../../assets/icons/meter_white.png';
 import logoutImage from '../../../../assets/icons/logout_white.png';
-import homeImage from '../../../../assets/icons/home_tenant.png';
+import homeImage from '../../../../assets/icons/home_white.png';
 
 import FeatureTab from "./FeatureTab";
 

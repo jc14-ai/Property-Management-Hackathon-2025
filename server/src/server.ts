@@ -51,7 +51,7 @@ app.post("/tenant-login", async (req: Request, res: Response) => {
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
-    res.json({ id: id });
+    res.json({ id: id, unit: unit });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal Server Error" });
